@@ -19,8 +19,10 @@ requirements:
     - cmake
     - make  # [unix]
     - xtensor
+    - qpot
   run:
     - xtensor
+    - qpot
 
 test:
   commands:
