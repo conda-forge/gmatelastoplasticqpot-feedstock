@@ -20,9 +20,11 @@ requirements:
     - make  # [unix]
     - xtensor
     - qpot
+    - gmattensor
   run:
     - xtensor
     - qpot
+    - gmattensor
 
 test:
   commands:
