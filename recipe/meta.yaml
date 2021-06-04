@@ -66,6 +66,7 @@ outputs:
         - pyxtensor  # [win]
       run:
         - python
+        - numpy
 
     test:
       imports:
