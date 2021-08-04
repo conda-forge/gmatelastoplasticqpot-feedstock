@@ -29,6 +29,7 @@ outputs:
         - cmake
         - make  # [unix]
       host:
+        - python
         - xtensor
         - qpot
         - gmattensor
