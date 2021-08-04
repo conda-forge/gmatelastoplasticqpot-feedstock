@@ -49,7 +49,8 @@ outputs:
 
   - name: python-{{ name|lower }}
 
-    skip: true  # [py<39 and osx and not x86_64]
+    build:
+      skip: true  # [py<39 and osx and not x86_64]
 
     script: install_python.sh   # [unix]
     script: install_python.bat  # [win]
