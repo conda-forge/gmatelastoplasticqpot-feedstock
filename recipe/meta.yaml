@@ -13,7 +13,6 @@ source:
 build:
   number: 0
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  skip: true  # [py<39 and osx and not x86_64]
 
 outputs:
 
@@ -49,6 +48,8 @@ outputs:
         - if exist %LIBRARY_PREFIX%\lib\cmake\{{ name }}Config.cmake (exit 0) else (exit 1)  # [win]
 
   - name: python-{{ name|lower }}
+
+    skip: true  # [py<39 and osx and not x86_64]
 
     script: install_python.sh   # [unix]
     script: install_python.bat  # [win]
