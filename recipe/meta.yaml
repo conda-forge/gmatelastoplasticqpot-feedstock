@@ -24,6 +24,7 @@ outputs:
 
     requirements:
       build:
+        - python  # [build_platform != target_platform]
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
