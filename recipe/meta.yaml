@@ -24,11 +24,12 @@ outputs:
 
     requirements:
       build:
+        - python  # [build_platform != target_platform]
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
       host:
-        - python  # [osx and not x86_64]
+        - python
         - xtensor
         - qpot
         - gmattensor
