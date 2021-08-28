@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "GMatElastoPlasticQPot" %}
-{% set version = "0.15.4" %}
+{% set version = "0.15.5" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2cc884f360a28f690bd3222615fe9d13e58ef6fd3877da6576183c66f10583fd
+  sha256: 660d6dc76ab58a12ff4bfda9a38dd9d109f43b65db205b50267785ede6712c09
 
 build:
   number: 0
@@ -19,7 +19,7 @@ outputs:
 
   - name: {{ name|lower }}
 
-    script: install.sh   # [unix]
+    script: install.sh  # [unix]
     script: install.bat  # [win]
 
     requirements:
@@ -48,7 +48,7 @@ outputs:
 
   - name: python-{{ name|lower }}
 
-    script: install_python.sh   # [unix]
+    script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
 
     requirements:
