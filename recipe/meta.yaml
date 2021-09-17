@@ -46,7 +46,7 @@ outputs:
   - name: python-{{ name|lower }}
 
     build:          # [python_impl == 'pypy']
-      - skip: true  # [python_impl == 'pypy']
+      skip: true  # [python_impl == 'pypy']
 
     script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
