@@ -60,6 +60,7 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - ninja
+        - make  # [unix]
       host:
         - gmattensor
         - numpy *
