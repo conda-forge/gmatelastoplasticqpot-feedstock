@@ -71,6 +71,7 @@ outputs:
         - setuptools_scm
         - xtensor
         - xtensor-python
+        - ninja
       run:
         - numpy *
         - python
