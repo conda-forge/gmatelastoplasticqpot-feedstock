@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "GMatElastoPlasticQPot" %}
-{% set version = "0.16.1" %}
+{% set version = "0.16.2" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0d2e6cb252dc1ac9002ceffbd006f4cd33eba97148c8eab9b2e4274c6f351c2e
+  sha256: b97d68dbff69636e91b1364b11c82f3336eb3c4361d962ccbbf358145379ef52
 
 build:
-  number: 2
+  number: 0
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
 outputs:
@@ -45,7 +45,7 @@ outputs:
 
   - name: python-{{ name|lower }}
 
-    build:        # [python_impl == 'pypy']
+    build:   # [python_impl == 'pypy']
       skip: true  # [python_impl == 'pypy']
 
     script: install_python.sh  # [unix]
