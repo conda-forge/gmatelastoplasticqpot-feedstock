@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 482ce54..ac0707c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -145,7 +145,10 @@ if(BUILD_PYTHON OR BUILD_ALL)
+     find_package(xtensor-python REQUIRED)
+ 
+     if (SKBUILD)
+-        find_package(NumPy REQUIRED)
++        set(Python_EXECUTABLE "${PYTHON_EXECUTABLE}")
++        set(Python_INCLUDE_DIR "${PYTHON_INCLUDE_DIR}")
++        set(Python_LIBRARY "${PYTHON_LIBRARY}")
++        find_package(Python COMPONENTS NumPy)
+     else()
+         find_package(Python REQUIRED COMPONENTS Interpreter Development NumPy)
+     endif()
+@@ -156,7 +159,7 @@ if(BUILD_PYTHON OR BUILD_ALL)
+     target_link_libraries(${PYPROJECT_NAME} PUBLIC ${PROJECT_NAME} xtensor-python)
+ 
+     if (SKBUILD)
+-        target_include_directories(${PYPROJECT_NAME} PUBLIC ${NumPy_INCLUDE_DIRS})
++        target_include_directories(${PYPROJECT_NAME} PUBLIC ${Python_NumPy_INCLUDE_DIRS})
+     else()
+         target_link_libraries(${PYPROJECT_NAME} PUBLIC ${PROJECT_NAME} pybind11::module Python::NumPy)
+     endif()

@@ -9,6 +9,7 @@ package:
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: b97d68dbff69636e91b1364b11c82f3336eb3c4361d962ccbbf358145379ef52
+  patches: cmake.patch
 
 build:
   number: 1
