@@ -19,6 +19,8 @@ outputs:
 
     script: install.sh  # [unix]
     script: install.bat  # [win]
+    build:
+      script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
     requirements:
       build:
