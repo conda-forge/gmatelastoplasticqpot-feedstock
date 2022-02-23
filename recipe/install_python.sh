@@ -10,5 +10,9 @@ args = [arg for arg in args if len(arg.split('DCMAKE_INSTALL_PREFIX')) == 1]
 print(' '.join(args))
 " > my_cmake_args.py
 
+cat my_cmake_args.py
+env
+
+CMAKE_GENERATOR="Ninja"
 
 $PYTHON setup.py install --build-type Release `python my_cmake_args.py`
