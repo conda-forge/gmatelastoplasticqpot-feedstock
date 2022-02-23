@@ -13,4 +13,6 @@ print(' '.join(args))
 cat my_cmake_args.py
 env
 
+CMAKE_GENERATOR="Ninja"
+
 $PYTHON setup.py install --build-type Release `python my_cmake_args.py`
