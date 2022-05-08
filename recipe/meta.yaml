@@ -65,7 +65,7 @@ outputs:
         - make  # [unix]
         - ninja
       host:
-        - gmattensor <0.8.0
+        - gmattensor >=0.8.0
         - numpy *
         - pip
         - pybind11
