@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "GMatElastoPlasticQPot" %}
-{% set version = "0.16.2" %}
+{% set version = "0.16.3" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b97d68dbff69636e91b1364b11c82f3336eb3c4361d962ccbbf358145379ef52
+  sha256: bcff14a415f4324829f0f4563ccff1d9f8e9ae8287c8fdd15eaf767922b78e37
 
 build:
-  number: 2
+  number: 0
 
 outputs:
 
@@ -29,11 +29,11 @@ outputs:
         - cmake
         - make  # [unix]
       host:
-        - gmattensor <0.8.0
+        - gmattensor >=0.8.0
         - qpot
         - xtensor
       run:
-        - gmattensor <0.8.0
+        - gmattensor >=0.8.0
         - qpot
         - xtensor
 
@@ -65,7 +65,7 @@ outputs:
         - make  # [unix]
         - ninja
       host:
-        - gmattensor <0.8.0
+        - gmattensor >=0.8.0
         - numpy *
         - pip
         - pybind11
