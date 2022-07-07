@@ -11,7 +11,7 @@ source:
   sha256: bcff14a415f4324829f0f4563ccff1d9f8e9ae8287c8fdd15eaf767922b78e37
 
 build:
-  number: 0
+  number: 1
 
 outputs:
 
@@ -30,11 +30,11 @@ outputs:
         - make  # [unix]
       host:
         - gmattensor >=0.8.0
-        - qpot
+        - qpot <0.12.0
         - xtensor
       run:
         - gmattensor >=0.8.0
-        - qpot
+        - qpot <0.12.0
         - xtensor
 
     test:
@@ -71,7 +71,7 @@ outputs:
         - pybind11
         - pybind11-abi
         - python
-        - qpot
+        - qpot <0.12.0
         - scikit-build
         - setuptools_scm
         - xtensor
