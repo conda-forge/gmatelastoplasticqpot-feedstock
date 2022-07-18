@@ -79,6 +79,7 @@ outputs:
       run:
         - numpy *
         - python
+        - python-gmattensor >=0.10.2
 
     test:
       imports:
