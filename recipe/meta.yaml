@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "GMatElastoPlasticQPot" %}
-{% set version = "0.18.0" %}
+{% set version = "0.18.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3cff1315981715840ed1df9180cd2af82a65b6b1bbec7793770d36ad0fbc2816
+  sha256: acbe48721e3e9854c539802d1c31d16b073415b0c3eb6c826ea7e31ed95810b0
 
 build:
   number: 0
